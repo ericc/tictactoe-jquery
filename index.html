@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Unwinnable Tic Tac Toe Game</title>
+  <script src="https://use.fontawesome.com/de5c0a0434.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1 class="text-center">Zero Sum Game</h1>
+    
+    <div id="game-console">
+      <div id="settings-panel" class="panel text-center">
+        <h2 class="text-center panel-heading"><i class="fa fa-cog"></i> Game Settings</h2>
+        <div id="display">
+          <p class="no-margin">You are currently playing as:</p>
+          <div id="character-display">
+            <i class="fa fa-circle-o"></i>
+          </div>
+          <hr>
+          <p id="first-text"></p>
+          <hr>
+          <div class="form-group text-center">
+            <div id="pre-game-actions">
+              <button type="button" id="start-btn" class="btn btn-start">Start!</button>
+              <button type="button" id="edit-btn" class="btn btn-primary"><i class="fa fa-pencil fa-btn"></i> Edit</button>
+            </div>
+            <div id="in-game-actions" class='hidden'>
+              <button type="button" id="reset-btn" class="btn btn-primary"><i class="fa fa-refresh fa-btn"></i> Reset</button>
+              <button type="button" id="stop-btn" class="btn btn-stop"><i class="fa fa-stop fa-btn"></i> Stop</button>
+            </div>
+          </div>
+        </div>
+        <div id="edit" class="hidden">
+          <div class="form-group">
+            <p>Choose a character:</p>
+            <label for="o">
+              <input type="radio" id="o" name="character" value="o" checked>
+              <span class="characters"><i class="fa fa-circle-o"></i></span>
+            </label>
+            or
+            <label for="x">
+              <input type="radio" id="x" name="character" value="x">
+              <span class="characters"><i class="fa fa-times"></i></span>
+            </label>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="first"><input type="checkbox" id="first" name="first" value="yes" checked> Go First</label>
+          </div>
+          <hr>
+          <div class="form-group text-center">
+            <button type="button" id="save-btn" class="btn btn-primary"><i class="fa fa-floppy-o fa-btn"></i> Save</button>
+          </div>
+        </div>
+      </div>
+      <div id="gameboard">
+        <div id="pending-overlay"><p><i class="fa fa-pause"></i></p></div>
+        <div id="grid">
+          <div class="board-row">
+            <div id="aa" class="board-col"></div>
+            <div id="ba" class="board-col"></div>
+            <div id="ca" class="board-col"></div>
+          </div>
+          <div class="board-row">
+            <div id="ab" class="board-col"></div>
+            <div id="bb" class="board-col"></div>
+            <div id="cb" class="board-col"></div>
+          </div>
+          <div class="board-row">
+            <div id="ac" class="board-col"></div>
+            <div id="bc" class="board-col"></div>
+            <div id="cc" class="board-col"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="results" class="overlay">
+      <div class="panel">
+        <h2 class="panel-heading text-center">Results</h2>
+        <div class="text-center">
+          <p id="message"></p>
+          <div class="form-group">
+            <button type="button" id="restart-btn" class="btn btn-primary"><i class="fa fa-repeat fa-btn"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
